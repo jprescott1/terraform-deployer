@@ -1,9 +1,7 @@
 # The configuration for the `local` backend.
 
 terraform {
-  backend "local" {
-    path = "/../../terraform.tfstate"
-  }
+  backend "local" {}
 }
 
 resource "digitalocean_droplet" "www-1" {
