@@ -6,11 +6,21 @@
 # though: using the remote backend, Terraform will execute remotely in Terraform
 # Cloud where your token is already securely stored in your workspace!
 
-variable "provider_token" {
-  type      = string
-  sensitive = true
+terraform {
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+      version = "~> 2.0"
+    }
+  }
+}
+variable "do_token" {}
+variable "pvt_key" {}
+
+provider "digitalocean" {
+  token = var.do_token
 }
 
-provider "fakewebservices" {
-  token = var.provider_token
+data "digitalocean_ssh_key" "terraform" {
+  name = "terraform"
 }
