@@ -1,7 +1,15 @@
 # The configuration for the `local` backend.
 
 terraform {
-  backend "local" {}
+  backend "remote" {
+    # The name of your Terraform Cloud organization.
+    organization = "example-org-0ea620"
+
+    # The name of the Terraform Cloud workspace to store Terraform state files in.
+    workspaces {
+      name = "getting-started"
+    }
+  }
 }
 
 resource "digitalocean_droplet" "www-1" {
