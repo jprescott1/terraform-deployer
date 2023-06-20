@@ -2,7 +2,7 @@
 
 terraform {
   backend "local" {
-    path = "${path.module}/../../terraform.tfstate"
+    path = "/../../terraform.tfstate"
   }
 }
 
