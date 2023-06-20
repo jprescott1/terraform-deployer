@@ -16,8 +16,8 @@ terraform {
 }
 
 variable "provider_token" {
-   type      = string
-   sensitive = true
+  type      = string
+  sensitive = true
 }
 #variable "pvt_key" {}
 
