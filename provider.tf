@@ -14,10 +14,11 @@ terraform {
     }
   }
 }
-# variable "do_token" {
-#   type      = string
-#   sensitive = true
-# }
+
+variable "do_token" {
+  type      = string
+  sensitive = true
+}
 # variable "pvt_key" {}
 
 provider "digitalocean" {
