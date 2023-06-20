@@ -14,11 +14,11 @@ terraform {
     }
   }
 }
-variable "do_token" {}
+variable "TF_VAR_do_token" {}
 # variable "pvt_key" {}
 
 provider "digitalocean" {
-  token = var.do_token
+  token = var.TF_VAR_do_token
 }
 
 data "digitalocean_ssh_key" "terraform" {
