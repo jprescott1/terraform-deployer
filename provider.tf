@@ -20,10 +20,10 @@ terraform {
 # }
 # variable "pvt_key" {}
 
-# provider "digitalocean" {
-#   token = var.do_token
-# }
-
-data "digitalocean_ssh_key" "terraform" {
-  name = "terraform"
+provider "digitalocean" {
+  token = var.DIGITAL_OCEAN_TOKEN
 }
+
+# data "digitalocean_ssh_key" "terraform" {
+#   name = "terraform"
+# }
