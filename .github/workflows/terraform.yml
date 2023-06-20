@@ -44,7 +44,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false
       env:
-        do_token: ${{ env.DIGITAL_OCEAN_TOKEN }}
+        do_token: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
 
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
