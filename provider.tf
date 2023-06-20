@@ -21,7 +21,7 @@ terraform {
 # variable "pvt_key" {}
 
 provider "digitalocean" {
-  token = var.DIGITAL_OCEAN_TOKEN
+  token = var.do_token
 }
 
 # data "digitalocean_ssh_key" "terraform" {
