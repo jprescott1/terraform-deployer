@@ -7,7 +7,7 @@
 # Cloud where your token is already securely stored in your workspace!
 
 variable "provider_token" {
-  type = string
+  type      = string
   sensitive = true
 }
 
