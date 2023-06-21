@@ -27,5 +27,5 @@ terraform {
 
 data "digitalocean_ssh_key" "terraform" {
   name = "m1-mac"
-  id = "38647880"
+  id   = "38647880"
 }
