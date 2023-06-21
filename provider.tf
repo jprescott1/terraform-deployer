@@ -15,15 +15,9 @@ terraform {
   }
 }
 
-# variable "provider_token" {
-#   type      = string
-#   sensitive = true
-# }
-#variable "pvt_key" {}
-
-# provider "digitalocean" {
-#   token = var.do_token
-# }
+provider "digitalocean" {
+  token = "${var.digitalocean_access_token}"
+}
 
 data "digitalocean_ssh_key" "terraform" {
   name = "m1-mac"
