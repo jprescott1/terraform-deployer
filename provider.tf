@@ -25,6 +25,7 @@ terraform {
 #   token = var.do_token
 # }
 
-# data "digitalocean_ssh_key" "terraform" {
-#   name = "m1-mac"
-# }
+data "digitalocean_ssh_key" "terraform" {
+  name = "m1-mac"
+  id = "38647880"
+}
