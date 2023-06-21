@@ -15,16 +15,16 @@ terraform {
   }
 }
 
-variable "provider_token" {
-  type      = string
-  sensitive = true
-}
+# variable "provider_token" {
+#   type      = string
+#   sensitive = true
+# }
 #variable "pvt_key" {}
 
 # provider "digitalocean" {
 #   token = var.do_token
 # }
 
-data "digitalocean_ssh_key" "terraform" {
-  name = "terraform"
-}
+# data "digitalocean_ssh_key" "terraform" {
+#   name = "m1-mac"
+# }
