@@ -18,7 +18,3 @@ terraform {
 # provider "digitalocean" {
 #   token = var.TF_VAR_digitalocean_access_token
 # }
-
-data "digitalocean_ssh_key" "terraform" {
-  name = "m1-mac"
-}
