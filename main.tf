@@ -1,15 +1,8 @@
-# The configuration for the `local` backend.
-
 terraform {
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "example-org-0ea620"
-
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "terraform-deploy"
-    }
-  }
+  backend "gcs" {
+    bucket = "do-tf-state"
+    prefix = "./tf-deploy"
+ }
 }
 
 resource "digitalocean_droplet" "www-1" {
