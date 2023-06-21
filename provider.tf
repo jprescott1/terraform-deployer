@@ -16,7 +16,7 @@ terraform {
 }
 
 provider "digitalocean" {
-  token = var.digitalocean_access_token
+  token = "${var.digitalocean_access_token}"
 }
 
 data "digitalocean_ssh_key" "terraform" {
