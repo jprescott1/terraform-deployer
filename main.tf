@@ -7,7 +7,7 @@ terraform {
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "getting-started"
+      name = "terraform-deploy"
     }
   }
 }
@@ -17,7 +17,4 @@ resource "digitalocean_droplet" "www-1" {
   name   = "www-1"
   region = "nyc3"
   size   = "s-1vcpu-1gb"
-  ssh_keys = [
-    data.digitalocean_ssh_key.terraform.id
-  ]
 }
