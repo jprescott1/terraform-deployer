@@ -2,7 +2,7 @@ terraform {
   backend "gcs" {
     bucket = "do-tf-state"
     prefix = "./tf-deploy"
- }
+  }
 }
 
 resource "digitalocean_droplet" "www-1" {
