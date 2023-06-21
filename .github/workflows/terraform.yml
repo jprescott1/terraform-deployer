@@ -47,13 +47,3 @@ jobs:
       run: terraform plan -input=false
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-
-  terraform-apply:
-    name: 'Terraform Apply'
-    runs-on: ubuntu-latest
-    environment: production
-    
-    steps:
-    - name: Terraform Apply
-      run: terraform apply -auto-approve -input=false
-      if: github.event.pull_request.merged == true
